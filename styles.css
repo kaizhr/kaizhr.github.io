@@ -23,7 +23,7 @@ nav ul {
 nav ul li {
     display: inline;
     margin-right: 10px;
-    font-size: 6em;
+    text-size-adjust: 2px;
 }
 
 section {
