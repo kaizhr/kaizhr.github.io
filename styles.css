@@ -1,109 +1,72 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset beberapa gaya default */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Memudahkan pengaturan ukuran elemen */
 }
 
-header {
-    background-color: #f7f6f6;
-    color: rgb(252, 246, 246);
-    padding: 15px;
-    text-align: center;
-}
-
-nav {
-    margin: 15px 0;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-section {
-    padding: 20px;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #faf7f7;
-    color: rgb(250, 248, 248);
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-@media (max-width: 100%) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-}
-body {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: justify;
-    font-family: Arial, sans-serif;
-    background-color: #f7f5f5;
-    /* Styling untuk video latar belakang */
-    bg-video {
+/* Pengaturan latar belakang video */
+#bg-video {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Memastikan video menutupi seluruh layar */
-    z-index: -1; /* Membuat video berada di belakang konten */
+    min-width: 100%;   /* Pastikan video memenuhi lebar layar */
+    min-height: 100%;  /* Pastikan video memenuhi tinggi layar */
+    z-index: -1;       /* Menempatkan video di belakang konten */
+    object-fit: cover; /* Memastikan video tidak terdistorsi */
 }
 
-/* Styling konten di atas video */
-.content {
-    position: relative;
-    z-index: 1;
-    color: white; /* Warna teks kontras dengan video */
-    text-align: center;
-    margin-top: 20%;
-}
-
+/* Pengaturan untuk body dan html */
 body, html {
     height: 100%;
-    margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* Font yang lebih bersih dan modern */
+    background: rgba(0, 0, 0, 0.5); /* Background dengan transparansi agar teks lebih mudah dibaca */
+    color: white; /* Warna teks putih untuk kontras yang baik dengan latar belakang */
 }
 
-
+/* Pengaturan untuk header */
+header {
+    text-align: center; /* Memusatkan teks */
+    padding: 20px; /* Ruang di sekitar header */
 }
 
-h1 {
-    font-size: 16px;
-    color: #faf8f8;
+/* Pengaturan untuk navigasi */
+nav {
+    text-align: center; /* Memusatkan menu navigasi */
+    margin: 20px 0; /* Margin atas dan bawah untuk jarak */
 }
 
-p {
-    font-size: 1.2em;
+nav ul {
+    list-style-type: none; /* Menghilangkan bullet point pada daftar */
+    padding: 0; /* Menghilangkan padding */
 }
 
-a {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+nav ul li {
+    display: inline; /* Menampilkan item daftar dalam baris */
+    margin-right: 15px; /* Jarak antar item */
 }
 
-a:hover {
-    background-color: #45a049;
+nav ul li a {
+    color: white; /* Warna tautan putih */
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+    font-weight: bold; /* Menebalkan teks tautan */
+}
+
+/* Pengaturan untuk bagian section */
+section {
+    padding: 40px; /* Ruang di sekitar konten setiap section */
+    text-align: center; /* Memusatkan teks */
+    position: relative; /* Agar bisa menggunakan z-index */
+    z-index: 1; /* Memastikan konten muncul di depan video */
+}
+
+section h2 {
+    margin-bottom: 20px; /* Ruang bawah untuk heading */
+}
+
+/* Gambar dalam setiap section */
+section img {
+    max-width: 90%; /* Mengatur lebar gambar maksimum */
+    height: auto; /* Menjaga proporsi gambar */
+    border-radius: 10px; /* Memberikan sudut membulat pada gambar */
 }
